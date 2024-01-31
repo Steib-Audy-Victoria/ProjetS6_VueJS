@@ -1,0 +1,26 @@
+@import 'functions';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$blanc: #fff;
+$gris: #A1A1A1;
+$grisFonce: #4F4F4F;
+$grisClair: #E0E0E0;
+$noir: #000;
+$rouge: #F50F00;
+$bordeaux: #7A003F;
+$dore: #F0C300;
+
+$small-font-size: rem(13);
+$regular-font-size: rem(18);
+$medium-font-size: rem(26);
+$big-font-size: rem(36);
+$bigger-font-size: rem(48);
+$giant-font-size: rem(95);
+
+$primary-font-family: 'Montserrat', sans-serif;
+
+// media queries
+$small: 600px;
+$medium: 760px;
+$large: 960px;
