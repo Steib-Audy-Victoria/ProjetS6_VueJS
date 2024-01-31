@@ -26,9 +26,9 @@ const router = createRouter({
       component: () => import('../views/ConnexionView.vue')
     },
     {
-      path: '/deconnection',
-      name: 'deconnection',
-      component: () => import('../views/DeconnectionView.vue'),
+      path: '/deconnexion',
+      name: 'deconnexion',
+      component: () => import('../views/DeconnexionView.vue'),
       beforeEnter: authGuard,
     }
 

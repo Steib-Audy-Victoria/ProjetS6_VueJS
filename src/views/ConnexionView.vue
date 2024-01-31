@@ -3,11 +3,8 @@
     <div class="inscription">
       <h1 class="inscription__titre">Inscription</h1>
       <form class="inscription__form" @submit.prevent="inscrire">
-        <label class="inscription__form-label">Nom:</label>
-        <input class="inscription__form-input" v-model="inscriptionNom" required />
-
-        <label class="inscription__form-label">Prénom :</label>
-        <input class="inscription__form-input" v-model="inscriptionPrenom" required />
+        <label class="inscription__form-label">Nom d'utilisateur:</label>
+        <input class="inscription__form-input" v-model="inscriptionNomUser" required />
 
         <label class="inscription__form-label">Pays :</label>
         <select class="inscription__form-input" v-model="inscriptionPaysID" required>
@@ -36,8 +33,8 @@
     <div class="connexion">
       <h1 class="connexion__titre">Connexion</h1>
       <form class="connexion__form" @submit.prevent="connecter">
-        <label class="connexion__form-label">Email:</label>
-        <input class="connexion__form-input" v-model="connexionEmail" required />
+        <label class="connexion__form-label">Nom d'utilisateur:</label>
+        <input class="connexion__form-input" v-model="connexionNomUser" required />
 
         <label class="connexion__form-label">Mot de passe:</label>
         <input
@@ -61,13 +58,12 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      inscriptionNom: '',
-      inscriptionPrenom: '',
+      inscriptionNomUser: '',
       inscriptionEmail: '',
       inscriptionPaysID: '',
       inscriptionMotDePasse: '',
       inscriptionMessage: '',
-      connexionEmail: '',
+      connexionNomUser: '',
       connexionMotDePasse: '',
       connexionMessage: '',
       paysList: []
@@ -77,8 +73,7 @@ export default {
     inscrire() {
       axios
         .post('http://localhost:4000/inscription', {
-          Nom: this.inscriptionNom,
-          Prenom: this.inscriptionPrenom,
+          NomUser: this.inscriptionNomUser,
           Email: this.inscriptionEmail,
           PaysID: this.inscriptionPaysID,
           MotDePasse: this.inscriptionMotDePasse
@@ -95,7 +90,7 @@ export default {
     connecter() {
       axios
         .post('http://localhost:4000/connexion', {
-          Email: this.connexionEmail,
+          NomUser: this.connexionNomUser,
           MotDePasse: this.connexionMotDePasse
         })
         .then((response) => {
@@ -120,6 +115,9 @@ export default {
           console.error('Erreur lors du chargement de la liste des pays', error)
         })
     }
+  },
+  mounted() {
+    this.chargerListePays()
   }
 }
 </script>
