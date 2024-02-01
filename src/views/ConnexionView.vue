@@ -125,14 +125,15 @@ export default {
 <style lang="scss">
 .pageInsCon {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
-  margin: 10rem 0;
+  margin: 7rem 0;
 }
 
 .inscription {
   display: flex;
   flex-direction: column;
+
   &__titre {
     margin-bottom: 1rem;
     font-weight: 500;
