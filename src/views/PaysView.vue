@@ -1,8 +1,18 @@
 <template>
   <div>
-    <h1>Détails du pays</h1>
-    <p>Nom du pays : {{ Pays.NomPays }}</p>
-    {{ Pays }}
+    <div>
+      <h2>Détails du pays</h2>
+      <p>Nom du pays : {{ Pays.NomPays }}</p>
+      <p>Capitale : {{ Pays.Capitale }}</p>
+      <p>Continent : {{ Pays.Continent }}</p>
+      <p>Superficie : {{ Pays.Superficie }} km²</p>
+      <p>Drapeau :</p>
+      <img :src="Pays.Drapeau" alt="Drapeau du pays" />
+      <p>Langue : {{ Pays.Langue }}</p>
+      <p>Devise : {{ Pays.Devise }}</p>
+      <p>Monnaie : {{ Pays.Monnaie }}</p>
+      <p>Fuseau Horaire : {{ Pays.FuseauHoraire }}</p>
+    </div>
   </div>
 </template>
 
