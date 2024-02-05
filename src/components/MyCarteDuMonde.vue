@@ -326,7 +326,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="États-Unis d’Amérique">
+      <g id="États-Unis">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
