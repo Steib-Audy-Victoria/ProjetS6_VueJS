@@ -30,7 +30,12 @@ const router = createRouter({
       name: 'deconnexion',
       component: () => import('../views/DeconnexionView.vue'),
       beforeEnter: authGuard,
-    }
+    },
+    {
+      path: '/pays/:NomPays',
+      name: 'pays',
+      component: () => import('../views/PaysView.vue'),
+    },
 
   ]
 })

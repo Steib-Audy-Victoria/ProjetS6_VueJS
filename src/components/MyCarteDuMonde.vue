@@ -1,10 +1,48 @@
-<script setup></script>
+<script>
+import axios from 'axios'
+
+export default {
+  data() {
+    return {
+      // Données spécifiques
+    }
+  },
+  methods: {
+    async handlePaysClick(event) {
+      const pathElement = event.target.closest('g[id]')
+
+      if (pathElement) {
+        const NomPays = pathElement.id
+
+        console.log('Nom du pays cliqué :', NomPays)
+
+        try {
+          const response = await axios.get(`http://localhost:4000/pays/nom/${NomPays}`)
+          const PaysID = response.data.PaysID
+          console.log(`ID du pays ${NomPays} : ${PaysID}`)
+
+          // Rediriger l'utilisateur vers la page des détails du pays
+          this.$router.push({ name: 'pays', params: { NomPays: NomPays } })
+        } catch (error) {
+          console.error("Erreur lors de la récupération de l'ID du pays", error)
+        }
+      } else {
+        console.warn('Aucun élément <g> parent avec un attribut id trouvé.')
+      }
+    }
+  },
+  mounted() {
+    // Code à exécuter lors du montage du composant
+  }
+}
+</script>
 
 <template>
   <!-- Dans le front : Donner un id avec le nom du pays (div dans le svg ?)
     -> 
     Dans la base de donnée : avec la requette rechercher le nom du pays et récupérer l'id de ce pays -->
   <svg
+    @click="handlePaysClick"
     width="1422"
     height="826"
     viewBox="0 0 1422 826"
