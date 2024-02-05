@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div>
+  <div class="pays">
+    <div class="pays__details">
       <h2>Détails du pays</h2>
       <p>Nom du pays : {{ Pays.NomPays }}</p>
       <p>Capitale : {{ Pays.Capitale }}</p>
