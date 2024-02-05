@@ -242,7 +242,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="San José">
+      <g id="Costa Rica">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -798,7 +798,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Sao Tome">
+      <g id="Sao Tomé">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1002,7 +1002,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Sahara occidental">
+      <g id="Sahara Occidental">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1062,7 +1062,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="République Centre Africaine">
+      <g id="République Centrafricaine">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1302,7 +1302,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Jordan">
+      <g id="Jordanie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2317,7 +2317,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Saint Kitts and Devis">
+      <g id="Saint Kitts and Nevis">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
