@@ -518,7 +518,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Réunion">
+      <g id="Île de la Réunion">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -530,7 +530,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Maurice">
+      <g id="Île Maurice">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -558,7 +558,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Île de kerguelen">
+      <g id="Île de Kerguelen">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1158,7 +1158,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Egypte">
+      <g id="Égypte">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1242,7 +1242,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Îles de Azores">
+      <g id="Îles Azores">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1266,7 +1266,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Emirats Arabes Unis">
+      <g id="Émirats Arabes Unis">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1362,7 +1362,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Koweit">
+      <g id="Koweït">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
