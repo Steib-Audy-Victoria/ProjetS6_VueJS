@@ -37,6 +37,29 @@
         </ul>
       </div>
     </div>
+    <div class="Voiture" v-if="Pays.voitures && Pays.voitures.length">
+      <h3>Voitures :</h3>
+      <div class="Voiture__liste">
+        <ul class="Voiture__liste-card" v-for="voiture in Pays.voitures" :key="voiture.VoitureID">
+          <div>
+            <img :src="voiture.imgVoiture" alt="Image de la voiture" />
+          </div>
+          <div class="Voiture__liste-card-infos">
+            <li class="Voiture__liste-card-infos-NomMarque">
+              <span>{{ voiture.Marque }}</span>
+              -
+              <span>{{ voiture.Modele }}</span>
+            </li>
+            <li>
+              <span>{{ voiture.AnneeDebutFabrication }}</span>
+              -
+              <span v-if="voiture.AnneeFinFabrication === 0">Toujours fabriquer</span>
+              <span v-else>{{ voiture.AnneeFinFabrication }}</span>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -169,6 +192,60 @@ export default {
         strong {
           font-weight: 700;
           color: $beigeFonce;
+        }
+      }
+    }
+  }
+}
+
+.Voiture {
+  h3 {
+    font-size: $medium-font-size;
+    font-weight: 600;
+    text-align: center;
+    color: $beigeFonce;
+    margin-bottom: 1rem;
+  }
+
+  &__liste {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+
+    &-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1rem;
+
+      list-style: none;
+
+      border: 2px solid $beigeFonce;
+      background-color: $beigeClair;
+      border-radius: 2rem;
+      box-shadow: 0 0 10px $beigeFonce;
+
+      img {
+        width: 50rem;
+        height: auto;
+        object-fit: cover;
+      }
+
+      &-infos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &-NomMarque {
+          color: $beigeFonce;
+          span {
+            font-weight: 600;
+            text-align: center;
+            color: $beigeFonce;
+          }
         }
       }
     }
