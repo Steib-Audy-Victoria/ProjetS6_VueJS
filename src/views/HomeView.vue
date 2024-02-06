@@ -3,7 +3,6 @@ import MyCarteDuMonde from '@/components/MyCarteDuMonde.vue'
 </script>
 
 <template>
-  <h1>Test Home Page</h1>
   <MyCarteDuMonde />
 </template>
 

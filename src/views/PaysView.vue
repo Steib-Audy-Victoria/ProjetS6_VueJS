@@ -1,17 +1,23 @@
 <template>
-  <div class="pays">
-    <div class="pays__details">
-      <h2>Détails du pays</h2>
-      <p>Nom du pays : {{ Pays.NomPays }}</p>
-      <p>Capitale : {{ Pays.Capitale }}</p>
-      <p>Continent : {{ Pays.Continent }}</p>
-      <p>Superficie : {{ Pays.Superficie }} km²</p>
-      <p>Drapeau :</p>
+  <div class="Pays">
+    <div class="Presentation">
+      <h2>{{ Pays.NomPays }}</h2>
       <img :src="Pays.Drapeau" alt="Drapeau du pays" />
-      <p>Langue : {{ Pays.Langue }}</p>
-      <p>Devise : {{ Pays.Devise }}</p>
-      <p>Monnaie : {{ Pays.Monnaie }}</p>
-      <p>Fuseau Horaire : {{ Pays.FuseauHoraire }}</p>
+    </div>
+    <hr class="Pays__ligne" />
+    <div class="Infos">
+      <div class="Infos__Gauche"></div>
+      <div class="Infos__Droite">
+        <ul class="Infos__Droite-detailsPays">
+          <li><strong>Capitale :</strong> {{ Pays.Capitale }}</li>
+          <li><strong>Continent :</strong> {{ Pays.Continent }}</li>
+          <li><strong>Superficie :</strong> {{ Pays.Superficie }} km²</li>
+          <li><strong>Langue :</strong> {{ Pays.Langue }}</li>
+          <li><strong>Devise :</strong> {{ Pays.Devise }}</li>
+          <li><strong>Monnaie :</strong> {{ Pays.Monnaie }}</li>
+          <li><strong>Fuseau Horaire :</strong> {{ Pays.FuseauHoraire }}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -44,4 +50,64 @@ export default {
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.Pays {
+  &__ligne {
+    border: 1px solid $noir;
+    border-radius: 5rem;
+    width: 90%;
+  }
+}
+
+.Presentation {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 0;
+  h2 {
+    font-size: $bigger-font-size;
+    font-weight: 700;
+  }
+  img {
+    width: 5rem;
+    height: auto;
+    object-fit: cover;
+  }
+}
+.Infos {
+  display: grid;
+  grid-template:
+    'Gauche'
+    'Droite';
+
+  @include medium-up {
+    grid-template: 'Gauche Gauche Gauche Gauche Droite';
+  }
+
+  &__Gauche {
+    grid-area: Gauche;
+    padding: 0.5rem;
+  }
+
+  &__Droite {
+    grid-area: Droite;
+    padding: 0.5rem;
+
+    &-detailsPays {
+      list-style: none;
+      border: 2px solid $beigeFonce;
+      background-color: $beigeClair;
+      border-radius: 2rem;
+      box-shadow: 0 0 10px $beigeFonce;
+      padding: 0.5rem;
+      li {
+        margin: 0.5rem 0;
+        strong {
+          font-weight: 700;
+          color: $beigeFonce;
+        }
+      }
+    }
+  }
+}
+</style>
