@@ -6,9 +6,27 @@
     </div>
     <hr class="Pays__ligne" />
     <div class="Infos">
-      <div class="Infos__Gauche"></div>
+      <div class="Infos__Gauche">
+        <div class="Infos__Gauche-marquesVoiture" v-if="Pays.marques && Pays.marques.length">
+          <h3>Marques de voiture</h3>
+          <div class="Infos__Gauche-marquesVoiture-liste">
+            <ul v-for="marque in Pays.marques" :key="marque.MarqueID">
+              <router-link
+                class="MarqueLink"
+                :to="{ name: 'Marque', params: { id: marque.MarqueID } }"
+              >
+                <img :src="marque.LogoMarque" alt="Logo du pays" />
+                <!-- <li>
+                  <p>{{ marque.NomMarque }}</p>
+                </li> -->
+              </router-link>
+            </ul>
+          </div>
+        </div>
+      </div>
       <div class="Infos__Droite">
         <ul class="Infos__Droite-detailsPays">
+          <h3>Détails du pays</h3>
           <li><strong>Capitale :</strong> {{ Pays.Capitale }}</li>
           <li><strong>Continent :</strong> {{ Pays.Continent }}</li>
           <li><strong>Superficie :</strong> {{ Pays.Superficie }} km²</li>
@@ -77,16 +95,54 @@ export default {
 .Infos {
   display: grid;
   grid-template:
-    'Gauche'
-    'Droite';
+    'Droite'
+    'Gauche';
 
   @include medium-up {
-    grid-template: 'Gauche Gauche Gauche Gauche Droite';
+    grid-template: 'Gauche Gauche Droite';
   }
 
   &__Gauche {
     grid-area: Gauche;
-    padding: 0.5rem;
+    padding: 1rem;
+
+    &-marquesVoiture {
+      h3 {
+        font-size: $medium-font-size;
+        font-weight: 600;
+        text-align: center;
+        color: $grisFonce;
+        margin-bottom: 1rem;
+      }
+
+      &-liste {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1rem;
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          padding: 1rem;
+
+          list-style: none;
+
+          border: 2px solid $grisFonce;
+          background-color: $grisClair;
+          border-radius: 2rem;
+          box-shadow: 0 0 10px $grisFonce;
+
+          img {
+            width: 5rem;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+      }
+    }
   }
 
   &__Droite {
@@ -100,6 +156,14 @@ export default {
       border-radius: 2rem;
       box-shadow: 0 0 10px $beigeFonce;
       padding: 0.5rem;
+
+      h3 {
+        font-size: $medium-font-size;
+        font-weight: 600;
+        text-align: center;
+        color: $beigeFonce;
+      }
+
       li {
         margin: 0.5rem 0;
         strong {
@@ -109,5 +173,10 @@ export default {
       }
     }
   }
+}
+
+.MarqueLink {
+  text-decoration: none;
+  color: $noir;
 }
 </style>
