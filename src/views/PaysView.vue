@@ -41,22 +41,27 @@
       <h3>Voitures :</h3>
       <div class="Voiture__liste">
         <ul class="Voiture__liste-card" v-for="voiture in Pays.voitures" :key="voiture.VoitureID">
-          <div>
-            <img :src="voiture.imgVoiture" alt="Image de la voiture" />
-          </div>
-          <div class="Voiture__liste-card-infos">
-            <li class="Voiture__liste-card-infos-NomMarque">
-              <span>{{ voiture.Marque }}</span>
-              -
-              <span>{{ voiture.Modele }}</span>
-            </li>
-            <li>
-              <span>{{ voiture.AnneeDebutFabrication }}</span>
-              -
-              <span v-if="voiture.AnneeFinFabrication === 0">Toujours fabriquer</span>
-              <span v-else>{{ voiture.AnneeFinFabrication }}</span>
-            </li>
-          </div>
+          <router-link
+            class="VoitureLink"
+            :to="{ name: 'Voiture', params: { id: voiture.VoitureID } }"
+          >
+            <div>
+              <img :src="voiture.imgVoiture" alt="Image de la voiture" />
+            </div>
+            <div class="Voiture__liste-card-infos">
+              <li class="Voiture__liste-card-infos-NomMarque">
+                <span>{{ voiture.Marque }}</span>
+                -
+                <span>{{ voiture.Modele }}</span>
+              </li>
+              <li>
+                <span>{{ voiture.AnneeDebutFabrication }}</span>
+                -
+                <span v-if="voiture.AnneeFinFabrication === 0">Toujours fabriquer</span>
+                <span v-else>{{ voiture.AnneeFinFabrication }}</span>
+              </li>
+            </div>
+          </router-link>
         </ul>
       </div>
     </div>
@@ -253,6 +258,10 @@ export default {
 }
 
 .MarqueLink {
+  text-decoration: none;
+  color: $noir;
+}
+.VoitureLink {
   text-decoration: none;
   color: $noir;
 }

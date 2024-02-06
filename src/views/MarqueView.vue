@@ -53,6 +53,7 @@ export default {
   }
 
   min-height: 80vh;
+  margin-top: 5rem;
 
   &__Gauche {
     grid-area: Gauche;
