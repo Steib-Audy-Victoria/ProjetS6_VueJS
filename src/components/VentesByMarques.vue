@@ -1,6 +1,6 @@
 <template>
   <div class="VentesByMarques">
-    <canvas id="camembertChart" width="400" height="400"></canvas>
+    <canvas id="lineChart" width="800" height="400"></canvas>
   </div>
 </template>
 
@@ -17,40 +17,67 @@ export default {
         )
         const data = response.data
 
-        // Extrayez les noms de marques et les ventes correspondantes
-        const labels = data.map((entry) => entry.NomMarque)
-        const ventes = data.map((entry) => entry.NbVentes)
+        // Extraction des années uniques
+        const years = [...new Set(data.map((entry) => entry.AnneeVentes))]
+        const labels = years.map((year) => String(year))
 
-        // Générer des couleurs aléatoires
-        const backgroundColor = []
-        for (let i = 0; i < labels.length; i++) {
-          const randomColor = `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(
-            Math.random() * 256
-          )}, ${Math.floor(Math.random() * 256)}, 0.7)`
-          backgroundColor.push(randomColor)
-        }
+        // Extraction des noms de marques
+        const labelsMarques = [...new Set(data.map((entry) => entry.NomMarque))]
 
-        // Créez un camembert
-        const ctx = document.getElementById('camembertChart')
+        // Création d'un objet pour stocker les ventes par marque pour chaque année
+        const ventesParAnneeParMarque = {}
+        labelsMarques.forEach((marque) => {
+          ventesParAnneeParMarque[marque] = new Array(labels.length).fill(0)
+        })
+
+        // Remplissage des données de ventes par marque pour chaque année
+        data.forEach((entry) => {
+          const marqueIndex = labelsMarques.indexOf(entry.NomMarque)
+          const yearIndex = years.indexOf(entry.AnneeVentes)
+          ventesParAnneeParMarque[entry.NomMarque][yearIndex] = entry.NbVentes
+        })
+
+        // Création des datasets pour chaque marque
+        const datasets = labelsMarques.map((marque, index) => {
+          return {
+            label: marque,
+            data: ventesParAnneeParMarque[marque],
+            borderColor: `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(
+              Math.random() * 256
+            )}, ${Math.floor(Math.random() * 256)}, 1)`,
+            borderWidth: 1,
+            fill: false
+          }
+        })
+
+        // Création d'un graphique linéaire
+        const ctx = document.getElementById('lineChart')
         new Chart(ctx, {
-          type: 'pie',
+          type: 'line',
           data: {
             labels: labels,
-            datasets: [
-              {
-                label: 'Nombre de ventes',
-                data: ventes,
-                backgroundColor: backgroundColor,
-                borderWidth: 1
-              }
-            ]
+            datasets: datasets
           },
           options: {
             responsive: true,
             plugins: {
               title: {
                 display: true,
-                text: 'Répartition des ventes par marque'
+                text: 'Nombre de ventes par marque et par année'
+              }
+            },
+            scales: {
+              x: {
+                title: {
+                  display: true,
+                  text: 'Année'
+                }
+              },
+              y: {
+                title: {
+                  display: true,
+                  text: 'Nombre de ventes'
+                }
               }
             }
           }
@@ -60,11 +87,12 @@ export default {
       }
     }
   },
-
   mounted() {
     this.fetchVentesVoituresByMarques()
   }
 }
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+/* Vos styles ici */
+</style>
