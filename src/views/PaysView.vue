@@ -1,3 +1,7 @@
+<script setup>
+import VentesByMarques from '@/components/VentesByMarques.vue'
+</script>
+
 <template>
   <div class="Pays">
     <div class="Presentation">
@@ -6,7 +10,24 @@
     </div>
     <hr class="Pays__ligne" />
     <div class="Infos">
-      <div class="Infos__Gauche"></div>
+      <div class="Infos__Gauche">
+        <div class="marquesVoiture" v-if="Pays.marques && Pays.marques.length">
+          <h3>Marques de voiture</h3>
+          <div class="marquesVoiture__liste">
+            <ul v-for="marque in Pays.marques" :key="marque.MarqueID">
+              <router-link
+                class="MarqueLink"
+                :to="{ name: 'Marque', params: { id: marque.MarqueID } }"
+              >
+                <img :src="marque.LogoMarque" alt="Logo du pays" />
+                <!-- <li>
+                  <p>{{ marque.NomMarque }}</p>
+                </li> -->
+              </router-link>
+            </ul>
+          </div>
+        </div>
+      </div>
       <div class="Infos__Droite">
         <ul class="Infos__Droite-detailsPays">
           <h3>Détails du pays</h3>
@@ -20,6 +41,10 @@
         </ul>
       </div>
     </div>
+    <div class="GridChartJs">
+      <VentesByMarques :NomPays="Pays.NomPays" />
+    </div>
+
     <div class="Voiture" v-if="Pays.voitures && Pays.voitures.length">
       <h3>Voitures :</h3>
       <div class="Voiture__liste">
@@ -44,19 +69,6 @@
                 <span v-else>{{ voiture.AnneeFinFabrication }}</span>
               </li>
             </div>
-          </router-link>
-        </ul>
-      </div>
-    </div>
-    <div class="marquesVoiture" v-if="Pays.marques && Pays.marques.length">
-      <h3>Marques de voiture</h3>
-      <div class="marquesVoiture__liste">
-        <ul v-for="marque in Pays.marques" :key="marque.MarqueID">
-          <router-link class="MarqueLink" :to="{ name: 'Marque', params: { id: marque.MarqueID } }">
-            <img :src="marque.LogoMarque" alt="Logo du pays" />
-            <!-- <li>
-                  <p>{{ marque.NomMarque }}</p>
-                </li> -->
           </router-link>
         </ul>
       </div>
@@ -252,6 +264,11 @@ export default {
       }
     }
   }
+}
+
+.GridChartJs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .MarqueLink {
