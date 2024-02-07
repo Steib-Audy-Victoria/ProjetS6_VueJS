@@ -228,7 +228,6 @@ export default {
 }
 
 .marquesVoiture {
-  padding: 2rem 0;
   h3 {
     font-size: $medium-font-size;
     font-weight: 600;
