@@ -42,7 +42,9 @@ import VentesByMarques from '@/components/VentesByMarques.vue'
       </div>
     </div>
     <div class="GridChartJs">
-      <VentesByMarques :NomPays="Pays.NomPays" />
+      <div v-if="Pays && Pays.voitures && Pays.voitures.length">
+        <VentesByMarques :NomPays="Pays.NomPays" />
+      </div>
     </div>
 
     <div class="Voiture" v-if="Pays.voitures && Pays.voitures.length">
