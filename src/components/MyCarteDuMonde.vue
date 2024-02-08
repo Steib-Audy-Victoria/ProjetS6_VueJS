@@ -42,6 +42,7 @@ export default {
     -> 
     Dans la base de donnée : avec la requette rechercher le nom du pays et récupérer l'id de ce pays -->
   <svg
+    class="carte"
     @click="handlePaysClick"
     width="1422"
     height="826"
@@ -50,7 +51,7 @@ export default {
     xmlns="http://www.w3.org/2000/svg"
   >
     <g clip-path="url(#clip0_37_647)">
-      <g id="Russie">
+      <g class="carte__pays" id="Russie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -62,7 +63,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Chine">
+      <g class="carte__pays" id="Chine">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -74,7 +75,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Brésil">
+      <g class="carte__pays" id="Brésil">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -86,7 +87,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Argentine">
+      <g class="carte__pays" id="Argentine">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -98,7 +99,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Paraguay">
+      <g class="carte__pays" id="Paraguay">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -110,7 +111,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Bolivie">
+      <g class="carte__pays" id="Bolivie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -122,7 +123,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Uruguay">
+      <g class="carte__pays" id="Uruguay">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -134,7 +135,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Chili">
+      <g class="carte__pays" id="Chili">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -146,7 +147,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Pérou">
+      <g class="carte__pays" id="Pérou">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -158,7 +159,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Équateur">
+      <g class="carte__pays" id="Équateur">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -170,7 +171,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Colombie">
+      <g class="carte__pays" id="Colombie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -182,7 +183,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Venezuela">
+      <g class="carte__pays" id="Venezuela">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -194,7 +195,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Guyane">
+      <g class="carte__pays" id="Guyane">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -206,7 +207,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Guyane Française">
+      <g class="carte__pays" id="Guyane Française">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -218,7 +219,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Suriname">
+      <g class="carte__pays" id="Suriname">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -230,7 +231,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Panama">
+      <g class="carte__pays" id="Panama">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -242,7 +243,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Costa Rica">
+      <g class="carte__pays" id="Costa Rica">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -254,7 +255,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Nicaragua">
+      <g class="carte__pays" id="Nicaragua">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -266,7 +267,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Honduras">
+      <g class="carte__pays" id="Honduras">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -278,7 +279,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Le Salvador">
+      <g class="carte__pays" id="Le Salvador">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -290,7 +291,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Guatemala">
+      <g class="carte__pays" id="Guatemala">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -302,7 +303,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Bélize">
+      <g class="carte__pays" id="Bélize">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -314,7 +315,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Mexique">
+      <g class="carte__pays" id="Mexique">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -326,7 +327,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="États-Unis">
+      <g class="carte__pays" id="États-Unis">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -338,7 +339,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Les Bahamas">
+      <g class="carte__pays" id="Les Bahamas">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -350,7 +351,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Cuba">
+      <g class="carte__pays" id="Cuba">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -362,7 +363,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Haïti">
+      <g class="carte__pays" id="Haïti">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -374,7 +375,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Jamaïque">
+      <g class="carte__pays" id="Jamaïque">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -386,7 +387,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Alaska">
+      <g class="carte__pays" id="Alaska">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -398,7 +399,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Canada">
+      <g class="carte__pays" id="Canada">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -410,7 +411,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Groenland">
+      <g class="carte__pays" id="Groenland">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -422,7 +423,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="République Dominicaine">
+      <g class="carte__pays" id="République Dominicaine">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -434,7 +435,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Porto Rico">
+      <g class="carte__pays" id="Porto Rico">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -446,7 +447,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Islande">
+      <g class="carte__pays" id="Islande">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -458,7 +459,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Nouvelle-Zélande">
+      <g class="carte__pays" id="Nouvelle-Zélande">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -470,7 +471,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Afrique du Sud">
+      <g class="carte__pays" id="Afrique du Sud">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -482,7 +483,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Lesotho">
+      <g class="carte__pays" id="Lesotho">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -494,7 +495,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Mozambique">
+      <g class="carte__pays" id="Mozambique">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -506,7 +507,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Madagascar">
+      <g class="carte__pays" id="Madagascar">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -518,7 +519,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Île de la Réunion">
+      <g class="carte__pays" id="Île de la Réunion">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -530,7 +531,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Île Maurice">
+      <g class="carte__pays" id="Île Maurice">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -542,7 +543,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Australie">
+      <g class="carte__pays" id="Australie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -558,7 +559,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Île de Kerguelen">
+      <g class="carte__pays" id="Île de Kerguelen">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -570,7 +571,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Îles Heard et McDonald">
+      <g class="carte__pays" id="Îles Heard et McDonald">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -582,7 +583,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Nouvelle Calédonie">
+      <g class="carte__pays" id="Nouvelle Calédonie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -594,7 +595,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Namibie">
+      <g class="carte__pays" id="Namibie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -606,7 +607,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Botswana">
+      <g class="carte__pays" id="Botswana">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -618,7 +619,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Zimbabwe">
+      <g class="carte__pays" id="Zimbabwe">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -630,7 +631,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Swaziland">
+      <g class="carte__pays" id="Swaziland">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -642,7 +643,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Angola">
+      <g class="carte__pays" id="Angola">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -654,7 +655,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Zambie">
+      <g class="carte__pays" id="Zambie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -666,7 +667,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Algérie">
+      <g class="carte__pays" id="Algérie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -678,7 +679,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="République Démocratique du Congo">
+      <g class="carte__pays" id="République Démocratique du Congo">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -690,7 +691,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Rwanda">
+      <g class="carte__pays" id="Rwanda">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -702,7 +703,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Burundi">
+      <g class="carte__pays" id="Burundi">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -714,7 +715,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Tanzanie">
+      <g class="carte__pays" id="Tanzanie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -726,7 +727,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Cabinda">
+      <g class="carte__pays" id="Cabinda">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -738,7 +739,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Gabon">
+      <g class="carte__pays" id="Gabon">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -750,7 +751,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Congo">
+      <g class="carte__pays" id="Congo">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -762,7 +763,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Guinée Équatoriale">
+      <g class="carte__pays" id="Guinée Équatoriale">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -774,7 +775,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Cameroun">
+      <g class="carte__pays" id="Cameroun">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -786,7 +787,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Bioko">
+      <g class="carte__pays" id="Bioko">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -798,7 +799,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Sao Tomé">
+      <g class="carte__pays" id="Sao Tomé">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -810,7 +811,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Nigeria">
+      <g class="carte__pays" id="Nigeria">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -822,7 +823,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Niger">
+      <g class="carte__pays" id="Niger">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -834,7 +835,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Tchad">
+      <g class="carte__pays" id="Tchad">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -846,7 +847,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Bénin">
+      <g class="carte__pays" id="Bénin">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -858,7 +859,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Côte d'Ivoire">
+      <g class="carte__pays" id="Côte d'Ivoire">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -870,7 +871,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Ghana">
+      <g class="carte__pays" id="Ghana">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -882,7 +883,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Togo">
+      <g class="carte__pays" id="Togo">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -894,7 +895,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Sierra Leone">
+      <g class="carte__pays" id="Sierra Leone">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -906,7 +907,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Guinée">
+      <g class="carte__pays" id="Guinée">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -918,7 +919,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Libéria">
+      <g class="carte__pays" id="Libéria">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -930,7 +931,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Guinée Bissau">
+      <g class="carte__pays" id="Guinée Bissau">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -942,7 +943,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Sénégal">
+      <g class="carte__pays" id="Sénégal">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -954,7 +955,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="La Gambie">
+      <g class="carte__pays" id="La Gambie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -966,7 +967,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Burkina Faso">
+      <g class="carte__pays" id="Burkina Faso">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -978,7 +979,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Mali">
+      <g class="carte__pays" id="Mali">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -990,7 +991,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Mauritanie">
+      <g class="carte__pays" id="Mauritanie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1002,7 +1003,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Sahara Occidental">
+      <g class="carte__pays" id="Sahara Occidental">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1014,7 +1015,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Maroc">
+      <g class="carte__pays" id="Maroc">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1026,7 +1027,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Algérie">
+      <g class="carte__pays" id="Algérie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1038,7 +1039,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Tunisie">
+      <g class="carte__pays" id="Tunisie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1050,7 +1051,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Libye">
+      <g class="carte__pays" id="Libye">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1062,7 +1063,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="République Centrafricaine">
+      <g class="carte__pays" id="République Centrafricaine">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1074,7 +1075,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Kenya">
+      <g class="carte__pays" id="Kenya">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1086,7 +1087,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Ouganda">
+      <g class="carte__pays" id="Ouganda">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1098,7 +1099,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Somalie">
+      <g class="carte__pays" id="Somalie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1110,7 +1111,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Djibouti">
+      <g class="carte__pays" id="Djibouti">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1122,7 +1123,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Ethiopie">
+      <g class="carte__pays" id="Ethiopie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1134,7 +1135,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Soudan">
+      <g class="carte__pays" id="Soudan">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1146,7 +1147,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Érythrée">
+      <g class="carte__pays" id="Érythrée">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1158,7 +1159,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Égypte">
+      <g class="carte__pays" id="Égypte">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1182,7 +1183,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Yémen">
+      <g class="carte__pays" id="Yémen">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1194,7 +1195,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Oman">
+      <g class="carte__pays" id="Oman">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1206,7 +1207,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Cap-Vert">
+      <g class="carte__pays" id="Cap-Vert">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1218,7 +1219,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Les îles Canaries">
+      <g class="carte__pays" id="Les îles Canaries">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1230,7 +1231,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Île de Madère">
+      <g class="carte__pays" id="Île de Madère">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1242,7 +1243,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Îles Azores">
+      <g class="carte__pays" id="Îles Azores">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1254,7 +1255,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Les îles Falkland">
+      <g class="carte__pays" id="Les îles Falkland">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1266,7 +1267,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Émirats Arabes Unis">
+      <g class="carte__pays" id="Émirats Arabes Unis">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1278,7 +1279,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Qatar">
+      <g class="carte__pays" id="Qatar">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1290,7 +1291,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Arabie Saoudite">
+      <g class="carte__pays" id="Arabie Saoudite">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1302,7 +1303,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Jordanie">
+      <g class="carte__pays" id="Jordanie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1314,7 +1315,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Israël">
+      <g class="carte__pays" id="Israël">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1326,7 +1327,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Syrie">
+      <g class="carte__pays" id="Syrie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1338,7 +1339,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Liban">
+      <g class="carte__pays" id="Liban">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1350,7 +1351,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Chypre">
+      <g class="carte__pays" id="Chypre">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1362,7 +1363,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Koweït">
+      <g class="carte__pays" id="Koweït">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1374,7 +1375,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Irak">
+      <g class="carte__pays" id="Irak">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1386,7 +1387,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Turquie">
+      <g class="carte__pays" id="Turquie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1398,7 +1399,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Arménie">
+      <g class="carte__pays" id="Arménie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1410,7 +1411,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Iran">
+      <g class="carte__pays" id="Iran">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1422,7 +1423,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Azerbaïdjan">
+      <g class="carte__pays" id="Azerbaïdjan">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1434,7 +1435,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Grèce">
+      <g class="carte__pays" id="Grèce">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1446,7 +1447,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Portugal">
+      <g class="carte__pays" id="Portugal">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1458,7 +1459,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Espagne">
+      <g class="carte__pays" id="Espagne">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1470,7 +1471,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Malte">
+      <g class="carte__pays" id="Malte">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1482,7 +1483,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Italie">
+      <g class="carte__pays" id="Italie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1494,7 +1495,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="France">
+      <g class="carte__pays" id="France">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1506,7 +1507,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Allemagne">
+      <g class="carte__pays" id="Allemagne">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1518,7 +1519,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Îles Féroé">
+      <g class="carte__pays" id="Îles Féroé">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1530,7 +1531,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Royaume-Uni">
+      <g class="carte__pays" id="Royaume-Uni">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1542,7 +1543,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Irlande">
+      <g class="carte__pays" id="Irlande">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1554,7 +1555,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Belgique">
+      <g class="carte__pays" id="Belgique">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1566,7 +1567,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Luxembourg">
+      <g class="carte__pays" id="Luxembourg">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1578,7 +1579,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Pays-Bas">
+      <g class="carte__pays" id="Pays-Bas">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1590,7 +1591,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Suisse">
+      <g class="carte__pays" id="Suisse">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1602,7 +1603,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="République Tchèque">
+      <g class="carte__pays" id="République Tchèque">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1614,7 +1615,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Pologne">
+      <g class="carte__pays" id="Pologne">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1626,7 +1627,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Autriche">
+      <g class="carte__pays" id="Autriche">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1638,7 +1639,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Liechtenstein">
+      <g class="carte__pays" id="Liechtenstein">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1650,7 +1651,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Slovénie">
+      <g class="carte__pays" id="Slovénie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1662,7 +1663,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Bosnie-Herzégovine">
+      <g class="carte__pays" id="Bosnie-Herzégovine">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1674,7 +1675,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Croatie">
+      <g class="carte__pays" id="Croatie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1686,7 +1687,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Monténégro">
+      <g class="carte__pays" id="Monténégro">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1698,7 +1699,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Serbie">
+      <g class="carte__pays" id="Serbie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1710,7 +1711,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Albanie">
+      <g class="carte__pays" id="Albanie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1722,7 +1723,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Macédoine">
+      <g class="carte__pays" id="Macédoine">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1734,7 +1735,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Bulgarie">
+      <g class="carte__pays" id="Bulgarie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1746,7 +1747,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Slovaquie">
+      <g class="carte__pays" id="Slovaquie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1758,7 +1759,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Hongrie">
+      <g class="carte__pays" id="Hongrie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1770,7 +1771,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Roumanie">
+      <g class="carte__pays" id="Roumanie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1782,7 +1783,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Ukraine">
+      <g class="carte__pays" id="Ukraine">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1794,7 +1795,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Moldavie">
+      <g class="carte__pays" id="Moldavie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1806,7 +1807,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Biélorussie">
+      <g class="carte__pays" id="Biélorussie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1818,7 +1819,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Lituanie">
+      <g class="carte__pays" id="Lituanie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1830,7 +1831,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Lettonie">
+      <g class="carte__pays" id="Lettonie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1842,7 +1843,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Estonie">
+      <g class="carte__pays" id="Estonie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1854,7 +1855,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Finlande">
+      <g class="carte__pays" id="Finlande">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1866,7 +1867,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Suède">
+      <g class="carte__pays" id="Suède">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1878,7 +1879,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Norvège">
+      <g class="carte__pays" id="Norvège">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1890,7 +1891,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Danemark">
+      <g class="carte__pays" id="Danemark">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1902,7 +1903,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Afghanistan">
+      <g class="carte__pays" id="Afghanistan">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1914,7 +1915,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Pakistan">
+      <g class="carte__pays" id="Pakistan">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1926,7 +1927,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Kashmir">
+      <g class="carte__pays" id="Kashmir">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1938,7 +1939,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Népal">
+      <g class="carte__pays" id="Népal">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1950,7 +1951,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Bhoutan">
+      <g class="carte__pays" id="Bhoutan">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1962,7 +1963,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Inde">
+      <g class="carte__pays" id="Inde">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1974,7 +1975,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Bangladesh">
+      <g class="carte__pays" id="Bangladesh">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1986,7 +1987,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Sri Lanka">
+      <g class="carte__pays" id="Sri Lanka">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1998,7 +1999,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Myanmar">
+      <g class="carte__pays" id="Myanmar">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2010,7 +2011,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Thaïlande">
+      <g class="carte__pays" id="Thaïlande">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2022,7 +2023,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Laos">
+      <g class="carte__pays" id="Laos">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2034,7 +2035,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Cambodge">
+      <g class="carte__pays" id="Cambodge">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2046,7 +2047,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Vietnam">
+      <g class="carte__pays" id="Vietnam">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2058,7 +2059,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Malaisie">
+      <g class="carte__pays" id="Malaisie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2070,7 +2071,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Brunei">
+      <g class="carte__pays" id="Brunei">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2082,7 +2083,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Indonésie">
+      <g class="carte__pays" id="Indonésie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2101,7 +2102,7 @@ export default {
           fill="#EF7D59"
         />
       </g>
-      <g id="Philippines">
+      <g class="carte__pays" id="Philippines">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2113,7 +2114,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Papouasie Nouvelle Guinée">
+      <g class="carte__pays" id="Papouasie Nouvelle Guinée">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2125,7 +2126,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Les îles Salomon">
+      <g class="carte__pays" id="Les îles Salomon">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2137,7 +2138,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Vanuatu">
+      <g class="carte__pays" id="Vanuatu">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2149,7 +2150,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Fidji">
+      <g class="carte__pays" id="Fidji">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2161,7 +2162,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Turkménistan">
+      <g class="carte__pays" id="Turkménistan">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2173,7 +2174,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Ouzbékistan">
+      <g class="carte__pays" id="Ouzbékistan">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2185,7 +2186,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Kazakhstan">
+      <g class="carte__pays" id="Kazakhstan">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2197,7 +2198,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Mongolie">
+      <g class="carte__pays" id="Mongolie">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2209,7 +2210,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Corée du Nord">
+      <g class="carte__pays" id="Corée du Nord">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2221,7 +2222,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Corée du Sud">
+      <g class="carte__pays" id="Corée du Sud">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2233,7 +2234,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Japon">
+      <g class="carte__pays" id="Japon">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2245,7 +2246,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Svalbard">
+      <g class="carte__pays" id="Svalbard">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2257,7 +2258,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Guam">
+      <g class="carte__pays" id="Guam">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2269,7 +2270,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Îles de Adaman et Nicobar">
+      <g class="carte__pays" id="Îles de Adaman et Nicobar">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2281,7 +2282,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Les Seychelles">
+      <g class="carte__pays" id="Les Seychelles">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2293,7 +2294,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Comores">
+      <g class="carte__pays" id="Comores">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2305,7 +2306,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Mayotte">
+      <g class="carte__pays" id="Mayotte">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2317,7 +2318,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Saint Kitts and Nevis">
+      <g class="carte__pays" id="Saint Kitts and Nevis">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2329,7 +2330,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Montserrat">
+      <g class="carte__pays" id="Montserrat">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2341,7 +2342,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Guadeloupe">
+      <g class="carte__pays" id="Guadeloupe">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2353,7 +2354,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Dominique">
+      <g class="carte__pays" id="Dominique">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2365,7 +2366,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Martinique">
+      <g class="carte__pays" id="Martinique">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2377,7 +2378,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Saint Vincent">
+      <g class="carte__pays" id="Saint Vincent">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2389,7 +2390,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Îles de la Barbade">
+      <g class="carte__pays" id="Îles de la Barbade">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2401,7 +2402,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Trinité et Tobago">
+      <g class="carte__pays" id="Trinité et Tobago">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2413,7 +2414,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Géorgie">
+      <g class="carte__pays" id="Géorgie">
         <path
           d="M861.167 340.726L860.923 342.209L859.44 341.44L858.314 341.402H857.882L857.525 341.177L855.573 340.069L854.015 340.67L853.94 341.346L853.714 341.139L851.405 341.196L850.861 341.083L849.021 341.496L848.251 341.759L847.745 341.947L847.669 341.871L846.937 341.684L845.266 340.294L845.21 340.238L844.516 340.05L844.14 340.369L843.934 340.557L843.427 340.651L842.713 340.369L842.357 340.238L842.263 340.351L841.962 340.745L841.493 340.595L841.418 340.294V340.219L841.324 339.844L840.798 339.787L840.911 339.6L840.723 338.886L841.005 338.417L840.292 337.103L840.066 335.394L839.578 334.775L838.696 333.404L837.701 333.273L837.644 332.747L836.574 331.846L836.143 332.127L835.73 331.902L834.922 331.771L834.322 330.907L834.265 330.813H834.171C834.171 330.813 834.115 330.813 834.096 330.775C834.772 330.362 835.692 330.025 835.692 330.025L837.795 330.644L842.882 331.414L846.224 331.996L848.871 332.747L851.274 333.535L850.805 334.117L851.893 334.587L853.583 334.08L854.935 333.855L855.348 334.493L855.611 333.742L856.061 333.667L858.258 334.324L858.99 335.526L858.408 336.145L859.14 336.821C859.14 336.821 859.891 337.741 859.91 337.741L859.497 339.243L860.567 339.9L861.167 340.726Z"
           fill="#EF5959"
@@ -2444,7 +2445,7 @@ export default {
           fill="black"
         />
       </g>
-      <g id="Géorgie du Sud">
+      <g class="carte__pays" id="Géorgie du Sud">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -2458,11 +2459,17 @@ export default {
       </g>
     </g>
     <defs>
-      <clipPath id="clip0_37_647">
+      <clipPath class="carte__pays" id="clip0_37_647">
         <rect width="1422" height="826" fill="white" />
       </clipPath>
     </defs>
   </svg>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+.carte {
+  &__pays {
+    cursor: pointer;
+  }
+}
+</style>
