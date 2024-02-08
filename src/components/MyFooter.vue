@@ -25,11 +25,15 @@
   justify-content: center;
 
   &__titre {
-    font-size: $regular-font-size;
+    font-size: $smallRegular-font-size;
     font-weight: 600;
     margin: 0;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     text-align: center;
+
+    @include medium-up {
+      font-size: $regular-font-size;
+    }
   }
 
   &__ligne {
@@ -39,11 +43,22 @@
 
   &__lien {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+    padding-bottom: 1rem;
+
+    gap: 0.5rem;
     font-size: $small-font-size;
     font-variant: small-caps;
+
+    @include medium-up {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
 
     &-link {
       color: $blanc;

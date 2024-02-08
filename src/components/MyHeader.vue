@@ -5,11 +5,13 @@ import MyLogoMenu from '@/components/elements/MyLogoMenu.vue'
 
 <template>
   <header class="header">
-    <MyLogo color="blanc" size="moyen" />
+    <MyLogo color="blanc" size="petit" />
 
-    <h1 class="header__titre">Au Volant de la Diversité Mondiale</h1>
+    <router-link to="/" class="header__link">
+      <h1 class="header__titre">Au Volant de la Diversité Mondiale</h1>
+    </router-link>
 
-    <MyLogoMenu color="blanc" size="moyen" />
+    <MyLogoMenu color="blanc" size="petit" />
   </header>
 </template>
 
@@ -17,7 +19,7 @@ import MyLogoMenu from '@/components/elements/MyLogoMenu.vue'
 .header {
   background-color: $noir;
   color: $blanc;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   border-radius: 0 0 2rem 2rem;
 
   display: flex;
@@ -25,9 +27,18 @@ import MyLogoMenu from '@/components/elements/MyLogoMenu.vue'
   align-items: center;
 
   &__titre {
-    font-size: $big-font-size;
+    font-size: $smallRegular-font-size;
     font-weight: 600;
     margin: 0;
+
+    @include medium-up {
+      font-size: $middleMedium-font-size;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $blanc;
   }
 }
 </style>
