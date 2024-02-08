@@ -140,6 +140,9 @@ export default {
     @include medium-up {
       width: 5rem;
     }
+    @include large-up {
+      width: 8rem;
+    }
   }
 }
 .Infos {
