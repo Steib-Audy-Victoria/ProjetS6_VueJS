@@ -1,6 +1,6 @@
 <template>
   <div class="VentesByMarques">
-    <canvas id="lineChart" width="800" height="400"></canvas>
+    <canvas id="lineChart" width="800" height="800"></canvas>
   </div>
 </template>
 
