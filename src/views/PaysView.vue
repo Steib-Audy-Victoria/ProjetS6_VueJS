@@ -108,6 +108,10 @@ export default {
 
 <style lang="scss">
 .Pays {
+  margin: 1rem;
+  @include medium-up {
+    margin: 1rem 5rem;
+  }
   &__ligne {
     border: 1px solid $noir;
     border-radius: 5rem;
@@ -121,13 +125,21 @@ export default {
   align-items: center;
   margin: 20px 0;
   h2 {
-    font-size: $bigger-font-size;
+    font-size: $medium-font-size;
     font-weight: 700;
+
+    @include medium-up {
+      font-size: $bigger-font-size;
+    }
   }
   img {
-    width: 5rem;
+    width: 3rem;
     height: auto;
     object-fit: cover;
+
+    @include medium-up {
+      width: 5rem;
+    }
   }
 }
 .Infos {
@@ -136,7 +148,7 @@ export default {
     'Droite'
     'Gauche';
 
-  @include medium-up {
+  @include large-up {
     grid-template: 'Gauche Gauche Droite';
   }
 
@@ -158,10 +170,14 @@ export default {
       padding: 0.5rem;
 
       h3 {
-        font-size: $medium-font-size;
+        font-size: $regular-font-size;
         font-weight: 600;
         text-align: center;
         color: $beigeFonce;
+
+        @include medium-up {
+          font-size: $medium-font-size;
+        }
       }
 
       li {
@@ -176,18 +192,31 @@ export default {
 }
 
 .Voiture {
+  padding-top: 1rem;
   h3 {
-    font-size: $medium-font-size;
+    font-size: $regular-font-size;
     font-weight: 600;
     text-align: center;
     color: $beigeFonce;
     margin-bottom: 1rem;
+
+    @include medium-up {
+      font-size: $medium-font-size;
+    }
   }
 
   &__liste {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 1rem;
+
+    @include medium-up {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include large-up {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 
     &-card {
       display: flex;
@@ -195,7 +224,7 @@ export default {
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      padding: 1rem;
+      padding: 0.5rem;
 
       list-style: none;
 
@@ -208,6 +237,7 @@ export default {
         width: 50rem;
         height: auto;
         object-fit: cover;
+        border-radius: 2rem;
       }
 
       &-infos {
@@ -231,25 +261,40 @@ export default {
 
 .marquesVoiture {
   h3 {
-    font-size: $medium-font-size;
+    font-size: $regular-font-size;
     font-weight: 600;
     text-align: center;
     color: $grisFonce;
     margin-bottom: 1rem;
+
+    @include medium-up {
+      font-size: $medium-font-size;
+    }
   }
 
   &__liste {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
+
+    @include large-up {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
 
     ul {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      padding: 1rem;
+
+      padding: 0.1rem;
+
+      @include medium-up {
+        padding: 0.3rem;
+      }
+      @include large-up {
+        padding: 0.5rem;
+      }
 
       list-style: none;
 

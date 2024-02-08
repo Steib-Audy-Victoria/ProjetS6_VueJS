@@ -2,9 +2,13 @@
 
 body {
   font-family: $primary-font-family;
-  font-size: $regular-font-size;
+  font-size: $small-font-size;
   line-height: 1.2;
   background-color: $grisClair;
+
+  @include medium-up {
+    font-size: $regular-font-size;
+  }
 }
 
 .link {
