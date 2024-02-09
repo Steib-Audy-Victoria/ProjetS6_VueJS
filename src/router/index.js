@@ -32,6 +32,12 @@ const router = createRouter({
       beforeEnter: authGuard,
     },
     {
+      path: '/profil',
+      name: 'profil',
+      component: () => import('../views/ProfilView.vue'),
+      beforeEnter: authGuard,
+    },
+    {
       path: '/pays/:NomPays',
       name: 'pays',
       component: () => import('../views/PaysView.vue'),
