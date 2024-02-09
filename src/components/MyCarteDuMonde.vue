@@ -2459,7 +2459,7 @@ export default {
       </g>
     </g>
     <defs>
-      <clipPath class="carte__pays" id="clip0_37_647">
+      <clipPath id="clip0_37_647">
         <rect width="1422" height="826" fill="white" />
       </clipPath>
     </defs>
@@ -2470,6 +2470,12 @@ export default {
 .carte {
   &__pays {
     cursor: pointer;
+  }
+
+  &__pays:hover {
+    path:first-child {
+      fill: $gris;
+    }
   }
 }
 </style>
