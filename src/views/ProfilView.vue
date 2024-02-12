@@ -1,7 +1,7 @@
 <template>
   <div class="profil">
-    <h1 class="profil__titre">Profil Utilisateur</h1>
     <div v-if="utilisateur">
+      <h1 class="profil__titre">Profil Utilisateur</h1>
       <div class="profil__info">
         <p><strong>Nom d'utilisateur:</strong> {{ utilisateur.NomUser }}</p>
         <p><strong>Email:</strong> {{ utilisateur.Email }}</p>
@@ -24,6 +24,11 @@
         </select>
         <button @click="sauvegarderModifications">Sauvegarder</button>
         <button @click="annulerModifications">Annuler</button>
+      </div>
+      <div class="profil__btn">
+        <button class="profil__btn-deco">
+          <router-link class="profil__btn-deco-link" to="/deconnexion">Deconnexion</router-link>
+        </button>
       </div>
     </div>
   </div>
@@ -117,7 +122,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 .profil {
   max-width: 600px;
   margin: 0 auto;
@@ -125,19 +130,20 @@ export default {
   border: 1px solid #ccc;
   border-radius: 5px;
 
-  .profil__titre {
-    text-align: center;
+  &__titre {
+    font-weight: 500;
+    margin: 1rem 0;
   }
 
-  .profil__info {
-    margin-bottom: 20px;
+  &__info {
+    margin: 2rem 0;
 
     p {
       margin: 5px 0;
     }
   }
 
-  .profil__edit-form {
+  &__edit-form {
     margin-top: 20px;
 
     input,
@@ -152,18 +158,31 @@ export default {
     }
 
     button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
+      margin: 1rem 0;
+      margin-right: 1rem;
+      padding: 0.5rem;
+      border: 1px solid $beigeFonce;
+      border-radius: 0.25rem;
+      background-color: $beigeFonce;
+      color: $blanc;
+      font-weight: 500;
       cursor: pointer;
-      transition: background-color 0.3s;
-      margin-right: 10px;
+    }
+  }
 
-      &:hover {
-        background-color: #0056b3;
+  &__btn {
+    &-deco {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 1px solid $beigeFonce;
+      border-radius: 0.25rem;
+      background-color: $beigeFonce;
+      font-weight: 500;
+      cursor: pointer;
+
+      &-link {
+        text-decoration: none;
+        color: $blanc;
       }
     }
   }

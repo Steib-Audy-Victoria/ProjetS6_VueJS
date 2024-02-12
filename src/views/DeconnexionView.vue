@@ -1,6 +1,6 @@
 <template>
   <div class="deco">
-    <h3 class="deco__titre">Déconnections</h3>
+    <h3 class="deco__titre">Déconnexion</h3>
     <button class="deco__button" @click="deconnecter">Se déconnecter</button>
     <p class="deco__message">{{ deconnexionMessage }}</p>
     <!-- Reste du contenu de la page -->
@@ -51,9 +51,9 @@ export default {
   &__button {
     margin-bottom: 1rem;
     padding: 0.5rem;
-    border: 1px solid $grisFonce;
+    border: 1px solid $beigeFonce;
     border-radius: 0.25rem;
-    background-color: $grisFonce;
+    background-color: $beigeFonce;
     color: $blanc;
     font-weight: 500;
     cursor: pointer;

@@ -79,7 +79,8 @@ export default {
           MotDePasse: this.inscriptionMotDePasse
         })
         .then((response) => {
-          this.inscriptionMessage = 'Inscription réussie'
+          this.inscriptionMessage =
+            'Inscription réussie ! Veuillez vous connecter pour valider votre inscription.'
           console.log('Inscription réussie, ID utilisateur:', response.data.UserID)
         })
         .catch((error) => {
@@ -94,14 +95,20 @@ export default {
           MotDePasse: this.connexionMotDePasse
         })
         .then((response) => {
-          this.connexionMessage = 'Connexion réussie'
+          this.connexionMessage = `Connexion réussie ! Vous allez être redirigés vers la page profil.`
           console.log('Connexion réussie, ID utilisateur:', response.data.UserID)
+
           // Stocker le token dans le stockage local
           localStorage.setItem('token', response.data.token)
           console.log('Token:', response.data.token)
+
+          // Redirection après délai
+          setTimeout(() => {
+            this.$router.push('/profil')
+          }, 3000)
         })
         .catch((error) => {
-          this.connexionMessage = 'Erreur lors de la connexion'
+          this.connexionMessage = `Erreur lors de la connexion, mot de passe ou nom d'utilisateur incorrect.`
           console.error('Erreur lors de la connexion', error)
         })
     },
@@ -158,9 +165,9 @@ export default {
     &-button {
       margin-bottom: 1rem;
       padding: 0.5rem;
-      border: 1px solid $grisFonce;
+      border: 1px solid $beigeFonce;
       border-radius: 0.25rem;
-      background-color: $grisFonce;
+      background-color: $beigeFonce;
       color: $blanc;
       font-weight: 500;
       cursor: pointer;
@@ -196,9 +203,9 @@ export default {
     &-button {
       margin-bottom: 1rem;
       padding: 0.5rem;
-      border: 1px solid $grisFonce;
+      border: 1px solid $beigeFonce;
       border-radius: 0.25rem;
-      background-color: $grisFonce;
+      background-color: $beigeFonce;
       color: $blanc;
       font-weight: 500;
       cursor: pointer;
