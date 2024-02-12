@@ -1,7 +1,3 @@
-<script setup>
-import VentesByMarques from '@/components/VentesByMarques.vue'
-</script>
-
 <template>
   <div class="Pays">
     <div class="Presentation">
@@ -75,16 +71,58 @@ import VentesByMarques from '@/components/VentesByMarques.vue'
         </ul>
       </div>
     </div>
+
+    <!-- Section avis utilisateur -->
+    <div class="AvisUtilisateur" v-if="utilisateur">
+      <h3>Laisser un avis sur ce pays :</h3>
+      <form @submit.prevent="soumettreAvis">
+        <label for="note">Note :</label>
+        <input type="number" id="note" v-model="nouvelleNote" min="1" max="5" required />
+
+        <label for="commentaire">Commentaire :</label>
+        <textarea id="commentaire" v-model="nouveauCommentaire" required></textarea>
+
+        <button type="submit">Soumettre</button>
+      </form>
+    </div>
+
+    <!-- Liste des avis utilisateurs -->
+    <div class="AvisUtilisateurListe">
+      <h3>Avis des utilisateurs :</h3>
+      <div v-if="avisUtilisateurs.length > 0">
+        <ul v-for="avis in avisUtilisateurs" :key="avis.AvisID">
+          <li>
+            <p><strong>Utilisateur :</strong> {{ avis.NomUtilisateur }}</p>
+          </li>
+          <li>
+            <p><strong>Note :</strong> {{ avis.Note }}</p>
+          </li>
+          <li>
+            <p><strong>Commentaire :</strong> {{ avis.Commentaire }}</p>
+          </li>
+        </ul>
+      </div>
+      <p v-else-if="utilisateur">Aucun avis disponible.</p>
+      <p v-else>Veuillez vous connecter pour voir les avis.</p>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import VentesByMarques from '@/components/VentesByMarques.vue'
 
 export default {
+  components: {
+    VentesByMarques
+  },
   data() {
     return {
-      Pays: {}
+      Pays: {},
+      utilisateur: null,
+      nouvelleNote: null,
+      nouveauCommentaire: '',
+      avisUtilisateurs: []
     }
   },
   methods: {
@@ -99,10 +137,62 @@ export default {
       } catch (error) {
         console.error('Erreur lors de la récupération des détails du pays', error)
       }
+    },
+
+    async fetchUtilisateur() {
+      try {
+        const token = localStorage.getItem('token')
+        if (!token) {
+          return
+        }
+        const headers = { Authorization: token }
+        const response = await axios.get('http://localhost:4000/profil', { headers })
+        this.utilisateur = response.data
+      } catch (error) {
+        console.error('Erreur lors de la récupération du profil utilisateur:', error)
+      }
+    },
+
+    async fetchAvisUtilisateurs() {
+      try {
+        const response = await axios.get(
+          `http://localhost:4000/avis-utilisateurs/${this.Pays.PaysID}`
+        )
+        this.avisUtilisateurs = response.data
+      } catch (error) {
+        console.error('Erreur lors de la récupération des avis utilisateurs:', error)
+      }
+    },
+
+    async soumettreAvis() {
+      try {
+        const token = localStorage.getItem('token')
+        if (!token) {
+          alert('Vous devez être connecté pour laisser un avis.')
+          return
+        }
+        const headers = { Authorization: token }
+        const data = {
+          Note: this.nouvelleNote,
+          Commentaire: this.nouveauCommentaire,
+          PaysID: this.Pays.PaysID
+        }
+        await axios.post('http://localhost:4000/avis-utilisateurs', data, { headers })
+        // Réinitialiser les champs après soumission
+        this.nouvelleNote = null
+        this.nouveauCommentaire = ''
+        // Rafraîchir la liste des avis après soumission
+        this.fetchAvisUtilisateurs()
+      } catch (error) {
+        console.error("Erreur lors de la soumission de l'avis utilisateur:", error)
+      }
     }
   },
   mounted() {
     this.fetchPaysDetails()
+      .then(() => this.fetchUtilisateur())
+      .then(() => this.fetchAvisUtilisateurs())
+      .catch((error) => console.error('Erreur lors de la récupération des données:', error))
   }
 }
 </script>
@@ -332,5 +422,94 @@ export default {
 .VoitureLink {
   text-decoration: none;
   color: $noir;
+}
+
+.AvisUtilisateur {
+  margin: 1rem 0;
+  h3 {
+    font-size: $regular-font-size;
+    font-weight: 600;
+    text-align: center;
+    color: $beigeFonce;
+    margin-bottom: 1rem;
+
+    @include medium-up {
+      font-size: $medium-font-size;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    input,
+    textarea {
+      padding: 8px;
+      background: $beigeClair;
+      border: 1px solid $beigeFonce;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin: 1rem 0;
+      margin-right: 1rem;
+      padding: 0.5rem;
+      border: 1px solid $beigeFonce;
+      border-radius: 0.25rem;
+      background-color: $beigeFonce;
+      color: $blanc;
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
+}
+
+.AvisUtilisateurListe {
+  margin: 1rem 0;
+
+  h3 {
+    font-size: $regular-font-size;
+    font-weight: 600;
+    color: $beigeFonce;
+    margin-bottom: 1rem;
+
+    @include medium-up {
+      font-size: $middleMedium-font-size;
+    }
+  }
+  div {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+
+    @include medium-up {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include large-up {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0.5rem;
+
+      list-style: none;
+
+      border: 2px solid $beigeFonce;
+      background-color: $beigeClair;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 10px $beigeFonce;
+
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
 }
 </style>
