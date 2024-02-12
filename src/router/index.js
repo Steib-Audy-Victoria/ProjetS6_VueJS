@@ -48,6 +48,11 @@ const router = createRouter({
       component: () => import('../views/PaysView.vue'),
     },
     {
+      path: '/compare-pays',
+      name: 'comparePays',
+      component: () => import('../views/ComparePaysView.vue'),
+    },
+    {
       path: '/marque/:id',
       name: 'Marque',
       component: () => import('../views/MarqueView.vue'),

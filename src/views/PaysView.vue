@@ -91,6 +91,7 @@ export default {
     async fetchPaysDetails() {
       try {
         const NomPays = this.$route.params.NomPays
+        console.log(NomPays)
         const response = await axios.get(
           `http://localhost:4000/pays/nom/${this.$route.params.NomPays}`
         )

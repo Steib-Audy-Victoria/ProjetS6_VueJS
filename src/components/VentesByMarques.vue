@@ -9,11 +9,17 @@ import Chart from 'chart.js/auto'
 import axios from 'axios'
 
 export default {
+  props: {
+    NomPays: {
+      type: String,
+      required: true
+    }
+  },
   methods: {
     async fetchVentesVoituresByMarques() {
       try {
         const response = await axios.get(
-          `http://localhost:4000/ventes-voitures-marques/${this.$route.params.NomPays}`
+          `http://localhost:4000/ventes-voitures-marques/${this.NomPays}`
         )
         const data = response.data
 
