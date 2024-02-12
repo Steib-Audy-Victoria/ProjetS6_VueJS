@@ -152,7 +152,8 @@ export default {
       margin-bottom: 10px;
       width: 100%;
       padding: 8px;
-      border: 1px solid #ccc;
+      background: $beigeClair;
+      border: 1px solid $beigeFonce;
       border-radius: 4px;
       box-sizing: border-box;
     }

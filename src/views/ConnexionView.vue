@@ -158,7 +158,8 @@ export default {
     &-input {
       margin-bottom: 1rem;
       padding: 0.5rem;
-      border: 1px solid $grisFonce;
+      background: $beigeClair;
+      border: 1px solid $beigeFonce;
       border-radius: 0.25rem;
     }
 
@@ -196,7 +197,8 @@ export default {
     &-input {
       margin-bottom: 1rem;
       padding: 0.5rem;
-      border: 1px solid $grisFonce;
+      background: $beigeClair;
+      border: 1px solid $beigeFonce;
       border-radius: 0.25rem;
     }
 
