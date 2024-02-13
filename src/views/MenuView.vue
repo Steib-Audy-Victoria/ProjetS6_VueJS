@@ -41,7 +41,7 @@
         </router-link>
       </li>
       <li>
-        <router-link class="Liste__link" to="/">
+        <router-link class="Liste__link" to="/listePays">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -59,7 +59,7 @@
         </router-link>
       </li>
       <li>
-        <router-link class="Liste__link" to="/">
+        <router-link class="Liste__link" to="/listeMarques">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -78,7 +78,7 @@
         </router-link>
       </li>
       <li>
-        <router-link class="Liste__link" to="/">
+        <router-link class="Liste__link" to="/listeVoitures">
           <svg viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <g fill="currentColor">
               <path
