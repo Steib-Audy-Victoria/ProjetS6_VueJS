@@ -125,6 +125,7 @@ export default {
 <style lang="scss">
 .profil {
   max-width: 600px;
+  min-height: 80vh;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
