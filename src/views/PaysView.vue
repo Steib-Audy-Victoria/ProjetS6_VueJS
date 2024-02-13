@@ -69,7 +69,7 @@
               <li>
                 <span>{{ voiture.AnneeDebutFabrication }}</span>
                 -
-                <span v-if="voiture.AnneeFinFabrication === 0">Toujours fabriquer</span>
+                <span v-if="voiture.AnneeFinFabrication === 0">Toujours fabriqué</span>
                 <span v-else>{{ voiture.AnneeFinFabrication }}</span>
               </li>
             </div>
