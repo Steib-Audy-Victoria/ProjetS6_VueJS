@@ -118,7 +118,7 @@
 
   li {
     svg {
-      color: $beigeFonce;
+      color: $noir;
       width: 5rem;
       height: 5rem;
 
@@ -131,6 +131,10 @@
         width: 10rem;
         height: 10rem;
       }
+    }
+
+    svg:hover {
+      color: $beigeFonce;
     }
   }
 
