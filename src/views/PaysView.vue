@@ -6,6 +6,7 @@
     </div>
     <hr class="Pays__ligne" />
     <div class="Infos">
+      <!-- Section marques -->
       <div class="Infos__Gauche">
         <div class="marquesVoiture" v-if="Pays.marques && Pays.marques.length">
           <h3>Marques de voiture</h3>
@@ -24,6 +25,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Section détails du pays -->
       <div class="Infos__Droite">
         <ul class="Infos__Droite-detailsPays">
           <h3>Détails du pays</h3>
@@ -37,12 +40,15 @@
         </ul>
       </div>
     </div>
+
+    <!-- Section dataviz -->
     <div class="GridChartJs">
       <div v-if="Pays && Pays.voitures && Pays.voitures.length">
         <VentesByMarques :NomPays="Pays.NomPays" />
       </div>
     </div>
 
+    <!-- Section liste voiture -->
     <div class="Voiture" v-if="Pays.voitures && Pays.voitures.length">
       <h3>Voitures :</h3>
       <div class="Voiture__liste">
@@ -73,37 +79,55 @@
     </div>
 
     <!-- Section avis utilisateur -->
-    <div class="AvisUtilisateur" v-if="utilisateur">
-      <h3>Laisser un avis sur ce pays :</h3>
-      <form @submit.prevent="soumettreAvis">
-        <label for="note">Note :</label>
-        <input type="number" id="note" v-model="nouvelleNote" min="1" max="5" required />
+    <div>
+      <div class="AvisUtilisateur">
+        <h3>Laisser un avis sur ce pays :</h3>
+        <div v-if="utilisateur">
+          <form @submit.prevent="soumettreAvis">
+            <label for="note">Note :</label>
+            <input type="number" id="note" v-model="nouvelleNote" min="1" max="5" required />
 
-        <label for="commentaire">Commentaire :</label>
-        <textarea id="commentaire" v-model="nouveauCommentaire" required></textarea>
+            <label for="commentaire">Commentaire :</label>
+            <textarea id="commentaire" v-model="nouveauCommentaire" required></textarea>
 
-        <button type="submit">Soumettre</button>
-      </form>
+            <button type="submit">Soumettre</button>
+          </form>
+        </div>
+        <p v-else>
+          Veuillez vous connecter pour laisser un avis.
+          <span>
+            <router-link class="AvisUtilisateur-link" to="/connexion"> Se connecter </router-link>
+          </span>
+        </p>
+      </div>
+
+      <!-- Liste des avis utilisateurs -->
+      <div class="AvisUtilisateurListe">
+        <h3>Avis des utilisateurs :</h3>
+        <div v-if="avisUtilisateurs.length > 0">
+          <ul v-for="avis in avisUtilisateurs" :key="avis.AvisID">
+            <li>
+              <p><strong>Utilisateur :</strong> {{ avis.NomUtilisateur }}</p>
+            </li>
+            <li>
+              <p><strong>Note :</strong> {{ avis.Note }}</p>
+            </li>
+            <li>
+              <p><strong>Commentaire :</strong> {{ avis.Commentaire }}</p>
+            </li>
+          </ul>
+        </div>
+        <p v-else>Aucun avis disponible.</p>
+      </div>
     </div>
 
-    <!-- Liste des avis utilisateurs -->
-    <div class="AvisUtilisateurListe">
-      <h3>Avis des utilisateurs :</h3>
-      <div v-if="avisUtilisateurs.length > 0">
-        <ul v-for="avis in avisUtilisateurs" :key="avis.AvisID">
-          <li>
-            <p><strong>Utilisateur :</strong> {{ avis.NomUtilisateur }}</p>
-          </li>
-          <li>
-            <p><strong>Note :</strong> {{ avis.Note }}</p>
-          </li>
-          <li>
-            <p><strong>Commentaire :</strong> {{ avis.Commentaire }}</p>
-          </li>
-        </ul>
-      </div>
-      <p v-else-if="utilisateur">Aucun avis disponible.</p>
-      <p v-else>Veuillez vous connecter pour voir les avis.</p>
+    <!-- Section comparer pays -->
+    <div class="btnComparePays">
+      <button>
+        <router-link class="btnComparePays-link" to="/compare-pays">
+          Comparer des pays
+        </router-link>
+      </button>
     </div>
   </div>
 </template>
@@ -358,7 +382,7 @@ export default {
     font-size: $regular-font-size;
     font-weight: 600;
     text-align: center;
-    color: $grisFonce;
+    color: $noir;
     margin-bottom: 1rem;
 
     @include medium-up {
@@ -430,7 +454,7 @@ export default {
     font-size: $regular-font-size;
     font-weight: 600;
     text-align: center;
-    color: $beigeFonce;
+    color: $noir;
     margin-bottom: 1rem;
 
     @include medium-up {
@@ -442,13 +466,14 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
 
     input,
     textarea {
       padding: 8px;
-      background: $beigeClair;
-      border: 1px solid $beigeFonce;
+      background: $grisClair;
+      border: 1px solid $grisFonce;
       border-radius: 4px;
       box-sizing: border-box;
     }
@@ -457,13 +482,27 @@ export default {
       margin: 1rem 0;
       margin-right: 1rem;
       padding: 0.5rem;
-      border: 1px solid $beigeFonce;
+      border: 1px solid $grisFonce;
       border-radius: 0.25rem;
-      background-color: $beigeFonce;
+      background-color: $grisFonce;
       color: $blanc;
       font-weight: 500;
       cursor: pointer;
     }
+  }
+
+  p {
+    text-align: center;
+  }
+
+  &-link {
+    text-decoration: none;
+    color: $beigeFonce;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  &-link:hover {
+    text-decoration: underline;
   }
 }
 
@@ -473,8 +512,9 @@ export default {
   h3 {
     font-size: $regular-font-size;
     font-weight: 600;
-    color: $beigeFonce;
+    color: $noir;
     margin-bottom: 1rem;
+    text-align: center;
 
     @include medium-up {
       font-size: $middleMedium-font-size;
@@ -501,15 +541,42 @@ export default {
 
       list-style: none;
 
-      border: 2px solid $beigeFonce;
-      background-color: $beigeClair;
+      border: 2px solid $grisFonce;
+      background-color: $grisClair;
       border-radius: 0.5rem;
-      box-shadow: 0 0 10px $beigeFonce;
+      box-shadow: 0 0 10px $grisFonce;
 
       strong {
         font-weight: 500;
       }
     }
+  }
+}
+
+.btnComparePays {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $beigeFonce;
+    border-radius: 0.25rem;
+    background-color: $beigeFonce;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  &-link {
+    text-decoration: none;
+    color: $blanc;
+    font-weight: 500;
+    font-size: $medium-font-size;
+    padding: 0.5rem;
+    text-transform: uppercase;
   }
 }
 </style>
