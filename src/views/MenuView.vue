@@ -2,7 +2,6 @@
 
 <template>
   <div class="MenuP">
-    <h1 class="MenuP__titre">Menu</h1>
     <ul class="Liste">
       <li>
         <router-link class="Liste__link" to="/">
@@ -96,7 +95,8 @@
 
 <style lang="scss">
 .MenuP {
-  height: 80vh;
+  min-height: 80vh;
+  margin: 1rem 0;
   &__titre {
     font-weight: 500;
     margin: 1rem 0;
