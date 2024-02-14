@@ -25,6 +25,7 @@ export default {
 
         // Extraction des années uniques
         const years = [...new Set(data.map((entry) => entry.AnneeVentes))]
+        years.sort((a, b) => a - b) // Tri dans l'ordre croissant
         const labels = years.map((year) => String(year))
 
         // Extraction des noms de marques
